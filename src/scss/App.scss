@@ -1,0 +1,48 @@
+@import './Variables';
+
+html,
+body {
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-size: 1em;
+  line-height: 1.6em;
+  background: $white;
+  color: $darkgray;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+#root {
+  height: 100%;
+}
+
+.app {
+  height: 100%;
+
+  div {
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+  }
+
+  img {
+    transition: opacity $long_duration;
+  }
+
+  a, a:link, a:visited, a:active, .fakeLink {
+    color: $purple;
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+    transition: color $short_duration;
+
+    &:hover {
+      color: lighten($purple, 5%);
+    }
+  }
+}

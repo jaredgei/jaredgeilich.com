@@ -1,0 +1,49 @@
+@import './Variables';
+
+.footer {
+  background: $white;
+  height: $footer_height;
+  padding: $large_spacing;
+  display: flex;
+  align-items: center;
+
+  .copyright {
+    flex: 1;
+    opacity: 0.6;
+    font-weight: bold;
+    font-size: 0.8rem;
+    white-space: nowrap;
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .socials {
+    min-width: 100px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+
+    a {
+      opacity: 0.6;
+      margin: 0 $small_spacing;
+      color: $black;
+      transition: opacity $short_duration;
+      width: 16px;
+      height: 16px;
+
+      svg {
+        max-height: 16px;
+        max-width: 16px;
+      }
+
+      &.li { margin-top: -2px; }
+      &.fb { margin-top: -2px; }
+
+      &:hover {
+        opacity: 1;
+        color: $black;
+      }
+    }
+  }
+}

@@ -1,0 +1,13 @@
+@import './Variables';
+
+.header {
+  height: $header_height;
+  display: flex;
+  align-items: center;
+  padding: 0 $large_spacing;
+
+  .logoContainer {
+    width: 180px;
+    margin-top: 12px;
+  }
+}
