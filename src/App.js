@@ -5,6 +5,7 @@ import 'scss/App.scss';
 import Header from 'components/Header';
 import Footer from 'components/Footer';
 import Home from 'pages/Home';
+import NotFound from 'pages/NotFound';
 
 const App = () => {
   return (
@@ -14,6 +15,7 @@ const App = () => {
         <div className='page'>
           <Switch>
             <Route exact path='/' component={Home} />
+            <Route component={NotFound} />
           </Switch>
         </div>
         <Footer />

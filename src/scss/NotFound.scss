@@ -1,0 +1,30 @@
+@import './Variables';
+
+.notFound {
+  min-height: calc(100vh - #{$header_height + $footer_height});
+  background: $purple;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: $white;
+  font-weight: bold;
+
+  .notFoundTitle {
+    font-size: 3.2rem;
+    line-height: 1.6em;
+  }
+
+  .button {
+    background: $white;
+    margin-top: $large_spacing;
+
+    .buttonText {
+      color: $purple;
+    }
+
+    &:hover {
+      background: $white;
+    }
+  }
+}

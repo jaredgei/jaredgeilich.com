@@ -61,6 +61,20 @@
     @include responsive('<', 600px) {
       max-height: 400px;
     }
+
+    @include responsive('<', 500px) {
+      max-height: 320px;
+
+      .heroTextContainer {
+        .heroTextTitle {
+          font-size: 1.8rem;
+        }
+
+        .heroTextSubtitle {
+          font-size: 0.7rem;
+        }
+      }
+    }
   }
 
   .section {
@@ -110,6 +124,16 @@
       }
 
       @include responsive('<', 1000px) {
+        .flexImage {
+          max-width: 320px;
+        }
+
+        .flexText {
+          font-size: 1rem;
+        }
+      }
+
+      @include responsive('<', 800px) {
         flex-direction: column;
 
         .flexText {
