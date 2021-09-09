@@ -62,6 +62,7 @@
     bottom: 0;
     left: -240px;
     padding: $large_spacing;
+    z-index: $high_z_index;
     transition: left $short_duration ease-in-out;
 
     &.open {

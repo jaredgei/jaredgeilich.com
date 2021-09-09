@@ -26,4 +26,12 @@
       margin-top: $large_spacing;
     }
   }
+
+  @include responsive('<', 600px) {
+    padding: $medium_spacing;
+
+    img:not(:first-child) {
+      margin-top: $medium_spacing;
+    }
+  }
 }
