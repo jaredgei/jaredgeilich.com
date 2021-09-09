@@ -54,6 +54,23 @@
     }
   }
 
+  .closeBurger {
+    position: fixed;
+    top: $header_height;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+    z-index: $high_z_index;
+    background: transparent;
+    transition: background $short_duration;
+
+    &.open {
+      pointer-events: fill;
+      background: transparentize($black, 0.6);
+    }
+  }
+
   .hamburgerMenu {
     width: 240px;
     background: $white;
@@ -62,7 +79,7 @@
     bottom: 0;
     left: -240px;
     padding: $large_spacing;
-    z-index: $high_z_index;
+    z-index: $high_z_index + 1;
     transition: left $short_duration ease-in-out;
 
     &.open {

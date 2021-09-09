@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link, withRouter } from 'react-router-dom';
 import 'scss/Header.scss';
 
@@ -9,6 +9,10 @@ import logo from 'images/logo.svg';
 const Header = props => {
   const activePath = props.location.pathname;
   const [showHamburgerMenu, setShowHamburgerMenu] = useState(false);
+
+  useEffect(() => {
+    setShowHamburgerMenu(false);
+  }, [activePath]);
 
   const renderNavigation = () => {
     return (
@@ -30,6 +34,7 @@ const Header = props => {
         <Image src={logo} alt='Jared Geilich' />
       </Link>
       {renderNavigation()}
+      <div className={'closeBurger' + (showHamburgerMenu ? ' open' : '')} onClick={() => setShowHamburgerMenu(false)} />
       <div className={'hamburgerMenu' + (showHamburgerMenu ? ' open' : '')}>
         {renderNavigation()}
       </div>
