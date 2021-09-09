@@ -1,0 +1,13 @@
+@import './Variables';
+
+.hire {
+  min-height: calc(100vh - #{$header_height + $footer_height});
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .hireText {
+    max-width: 600px;
+    padding: $large_spacing;
+  }
+}

@@ -1,0 +1,52 @@
+@import './Variables';
+
+.music {
+  min-height: calc(100vh - #{$header_height + $footer_height});
+  background: $purple;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .icons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: $medium_spacing;
+
+    .icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 80px;
+      height: 80px;
+      background: $white;
+      color: $purple;
+      padding: $medium_spacing;
+      margin: $medium_spacing;
+      border-radius: $standard_border_radius;
+      transition: transform $short_duration;
+
+      &:hover {
+        transform: translateY(-$small_spacing);
+        color: $purple;
+      }
+
+      svg {
+        width: 40px;
+
+        &.apple {
+          width: 30px;
+          margin-bottom: 2px;
+        }
+        &.soundcloud { width: 42px; }
+        &.amazon {
+          margin-top: 3px;
+          width: 32px;
+         }
+        &.spotify { width: 34px; }
+        &.youtube { width: 38px; }
+      }
+    }
+  }
+}
