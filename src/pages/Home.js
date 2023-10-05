@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import 'scss/Home.scss';
 
 import Image from 'components/Image';
@@ -16,10 +16,15 @@ const Home = () => {
 
   const onMouseMove = event => {
     setMousePosition({
-      x: event.clientX - event.target.clientWidth / 2,
-      y: event.clientY - event.target.clientHeight / 2
+      x: event.clientX - window.innerWidth / 2,
+      y: event.clientY - window.innerHeight / 2
     });
   };
+
+  useEffect(() => {
+    window.addEventListener('mousemove', onMouseMove);
+    return () => window.removeEventListener('mousemove', onMouseMove);
+  }, []);
 
   const getAge = () => {
     const birthday = new Date(1993, 4, 29, 0, 0, 0, 0);
@@ -36,7 +41,7 @@ const Home = () => {
 
   return (
     <div className='home'>
-      <div className='hero' onMouseMove={onMouseMove}>
+      <div className='hero'>
         {renderHeroImage(heroStars, 24)}
         {renderHeroImage(heroMoon, 48)}
         {renderHeroImage(heroCity, 72)}

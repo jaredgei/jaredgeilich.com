@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Link, withRouter } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import 'scss/Header.scss';
 
 import Image from 'components/Image';
@@ -7,7 +7,8 @@ import Image from 'components/Image';
 import logo from 'images/logo.svg';
 
 const Header = props => {
-  const activePath = props.location.pathname;
+  const location = useLocation();
+  const activePath = location.pathname;
   const [showHamburgerMenu, setShowHamburgerMenu] = useState(false);
 
   useEffect(() => {
@@ -42,4 +43,4 @@ const Header = props => {
   );
 };
 
-export default withRouter(Header);
+export default Header;

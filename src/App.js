@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { createBrowserRouter, Outlet, RouterProvider } from 'react-router-dom';
 import 'scss/App.scss';
 
 import Header from 'components/Header';
@@ -10,24 +10,32 @@ import Music from 'pages/Music';
 import NotFound from 'pages/NotFound';
 import Portfolio from 'pages/Portfolio';
 
-const App = () => {
-  return (
-    <BrowserRouter basename='/'>
-      <div className='app'>
-        <Header />
-        <div className='page'>
-          <Switch>
-            <Route exact path='/' component={Home} />
-            <Route exact path='/portfolio' component={Portfolio} />
-            <Route exact path='/music' component={Music} />
-            <Route exact path='/hire' component={Hire} />
-            <Route component={NotFound} />
-          </Switch>
-        </div>
-        <Footer />
+const router = createBrowserRouter([{
+  path: '/',
+  element: (
+    <div className='app'>
+      <Header />
+      <div className='page'>
+        <Outlet />
       </div>
-    </BrowserRouter>
-  );
-};
+      <Footer />
+    </div>
+  ),
+  errorElement: <NotFound />,
+  children: [{
+    path: '/',
+    element: <Home />
+  }, {
+    path: '/portfolio',
+    element: <Portfolio />
+  }, {
+    path: '/music',
+    element: <Music />
+  }, {
+    path: '/hire',
+    element: <Hire />
+  }]
+}]);
 
+const App = () => <RouterProvider router={router} />;
 export default App;
