@@ -1,5 +1,8 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import 'scss/Home.scss';
+
+import useMousePosition from 'hooks/useMousePosition';
+import useScrollPosition from 'hooks/useScrollPosition';
 
 import Image from 'components/Image';
 
@@ -12,28 +15,17 @@ import heroStars from 'images/hero/stars.png';
 import portrait from 'images/portrait.jpg';
 
 const Home = () => {
-  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
-
-  const onMouseMove = event => {
-    setMousePosition({
-      x: event.clientX - window.innerWidth / 2,
-      y: event.clientY - window.innerHeight / 2
-    });
-  };
-
-  useEffect(() => {
-    window.addEventListener('mousemove', onMouseMove);
-    return () => window.removeEventListener('mousemove', onMouseMove);
-  }, []);
+  const mousePosition = useMousePosition();
+  const scrollPosition = useScrollPosition();
 
   const getAge = () => {
     const birthday = new Date(1993, 4, 29, 0, 0, 0, 0);
     return Math.floor((Date.now() - birthday.getTime()) / (24 * 60 * 60 * 365.25 * 1000)); // may be slightly off due to leap year approximation but close enough
   };
 
-  const renderHeroImage = (image, parallaxScale) => {
+  const renderHeroImage = (image, parallaxScale, scrollScale) => {
     return (
-      <div className='heroImageContainer' style={{ top: `${mousePosition.y / parallaxScale}px`, left: `${mousePosition.x / parallaxScale}px` }}>
+      <div className='heroImageContainer' style={{ top: `${(mousePosition.y / parallaxScale) + (scrollScale ? (scrollPosition / scrollScale) : 0)}px`, left: `${mousePosition.x / parallaxScale}px` }}>
         <Image src={image} alt='hero image' />
       </div>
     );
@@ -43,14 +35,14 @@ const Home = () => {
     <div className='home'>
       <div className='hero'>
         {renderHeroImage(heroStars, 24)}
-        {renderHeroImage(heroMoon, 48)}
-        {renderHeroImage(heroCity, 72)}
-        <div className='heroTextContainer'>
+        {renderHeroImage(heroMoon, 48, 1)}
+        {renderHeroImage(heroCity, 72, 2)}
+        <div className='heroTextContainer' style={{ top: `${scrollPosition / 4}px` }}>
           <div className='heroTextTitle'>Jared Geilich</div>
           <div className='heroTextSubtitle'>DEVELOPER // DESIGNER // MUSICIAN</div>
         </div>
-        {renderHeroImage(heroForeground, -48)}
-        {renderHeroImage(heroBokeh, -24)}
+        {renderHeroImage(heroForeground, -48, 6)}
+        {renderHeroImage(heroBokeh, -24, 8)}
       </div>
       <div className='about section'>
         <div className='flexContainer'>
