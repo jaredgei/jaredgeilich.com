@@ -49,9 +49,9 @@ const Home = () => {
           <div className='flexImage'><Image src={portrait} alt='portrait' /></div>
           <div className='flexText'>
             <div className='highlight'>Hello.</div>
-            <div className='text'>Thanks for visiting my website. I am a {getAge()} year old developer, designer, and musician, currently working as a senior software engineer at <a href='https://pilot.ai' target='_blank' rel='noopener noreferrer'>pilot.ai</a>.</div>
-            <div className='text'>I work primarily in the Node.js ecosystem, and also use React.js for front-end development, and React Native for mobile development.</div>
-            <div className='text'>My work also includes UX and creative design, using software like Sketch, Photoshop, Procreate, and more.</div>
+            <div className='text'>Thanks for visiting my website. I am a {getAge()} year old developer, designer, and musician, currently based in Boston, MA.</div>
+            <div className='text'>I am passionate about user experience and building beautiful products, and have worked across the full stack of application development.</div>
+            <div className='text'>I work primarily in the node.js ecosystem, and have experience with UX and creative design using software like Sketch, Photoshop, Procreate, and more.</div>
             <div className='text'>Finally, I have experience with music composition and production, as well as film production and editing.</div>
           </div>
         </div>
