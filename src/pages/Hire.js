@@ -35,7 +35,7 @@ const Hire = () => {
   const renderEntry = (title, url, location, date, description, content) => (
     <div className='entry'>
       <div className='entryTop'>
-        <div className='entryTitle'><a href={url} target='_blank' rel='noopener noreferrer' className='titleBold'>{title}</a>{location ? ` | ${location}` : ''}</div>
+        <div className='entryTitle'><a href={url} target='_blank' rel='noopener noreferrer' className='titleBold'>{title}</a>{location ? <span className='location'>{` | ${location}`}</span> : ''}</div>
         <div className='entryDate'>{date}</div>
       </div>
       <div className='entryDescription'>{description}</div>
