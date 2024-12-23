@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import 'scss/Home.scss';
 
 import useMousePosition from 'hooks/useMousePosition';
@@ -17,6 +17,12 @@ import portrait from 'images/portrait.jpg';
 const Home = () => {
   const mousePosition = useMousePosition();
   const scrollPosition = useScrollPosition();
+  const [firstMousePositionAnimationComplete, setFirstMousePositionAnimationComplete] = useState(false);
+
+  useEffect(() => {
+    if (firstMousePositionAnimationComplete || !mousePosition.x) return;
+    setTimeout(() => setFirstMousePositionAnimationComplete(true), 100);
+  }, [mousePosition]);
 
   const getAge = () => {
     const birthday = new Date(1993, 4, 29, 0, 0, 0, 0);
@@ -25,7 +31,13 @@ const Home = () => {
 
   const renderHeroImage = (image, parallaxScale, scrollScale) => {
     return (
-      <div className='heroImageContainer' style={{ top: `${(mousePosition.y / parallaxScale) + (scrollScale ? (scrollPosition / scrollScale) : 0)}px`, left: `${mousePosition.x / parallaxScale}px` }}>
+      <div
+        className='heroImageContainer'
+        style={{
+          top: `${(mousePosition.y / parallaxScale) + (scrollScale ? (scrollPosition / scrollScale) : 0)}px`,
+          left: `${mousePosition.x / parallaxScale}px`,
+          transition: !firstMousePositionAnimationComplete ? 'top 0.1s ease-in-out, left 0.1s ease-in-out' : ''
+        }}>
         <Image src={image} alt='hero image' />
       </div>
     );
