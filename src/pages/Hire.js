@@ -85,8 +85,9 @@ const Hire = () => {
         <div className='section'>
           {renderSectionHeader('Projects', CODE_BRANCH_ICON)}
           <div className='sectionContent'>
+            {renderEntry('rpeg.io', 'https://rpeg.io', null, null, 'Lead Engineer & Designer', 'Lyric synchronization software designed for musicians and their teams to create beautiful lyric videos and distribute precise word-by-word timing data to streaming platforms.')}
+            {renderEntry('mediocre.business', 'https://mediocre.business', null, null, 'Lead Engineer & Designer', 'Society is obsessed with seeking out the best and most instagrammable establishments, so we created a service to decompress by easily finding the most average-rated businesses.')}
             {renderEntry('synthesize.consulting', 'https://github.com/jaredgei/synthesize/tree/main', null, null, 'Lead Engineer & Designer', 'A project for micro-consulting where users can ask a former McKinsey consultant bite-sized (yes/no or 100 character limited) questions for a fraction of the cost of traditional consulting.')}
-            {renderEntry('mediocre.business', 'https://mediocre.business', null, null, 'Lead Engineer & Designer', 'Society is obsessed with seeking out the best and most instagrammable establishments, so we created a service to decompress by easily finding the most average rated businesses.')}
             {renderEntry('The Stall Wall', 'https://github.com/jaredgei/the-stall-wall', null, null, 'Lead Engineer & Designer', 'A chatroom that only allows one user inside at a time, similar to communication via writing on the inside of a bathroom stall.')}
             {renderEntry('Potlux', 'https://engageduniversity.blogs.wesleyan.edu/2016/02/22/pcse-seed-grants-in-action-report-3-from-potlux/', null, null, 'Frontend Engineer & Designer', 'A sustainability platform for college students to share the programs they are creating at their universities to help the environment.')}
           </div>
