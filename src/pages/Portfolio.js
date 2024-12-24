@@ -11,6 +11,7 @@ import pilotHome3 from 'images/portfolio/pilot-home-3.png';
 import pilotHome4 from 'images/portfolio/pilot-home-4.png';
 import potlux1 from 'images/portfolio/potlux-1.jpg';
 import potlux2 from 'images/portfolio/potlux-2.jpg';
+import rpegio1 from 'images/portfolio/rpegio-1.png';
 import synthesize from 'images/portfolio/synthesize.png';
 import visualTools1 from 'images/portfolio/visual-tools-1.png';
 import visualTools2 from 'images/portfolio/visual-tools-2.png';
@@ -28,6 +29,8 @@ const Portfolio = () => {
       <Image src={pilotHome3} alt='pilot ai homepage' />
       <Image src={pilotHome4} alt='pilot ai homepage' />
       <Image src={cloudAnalytics} alt='cloud analytics dashboard' />
+      <Image src={cloudAnalytics} alt='cloud analytics dashboard' />
+      <Image src={rpegio1} alt='rpegio video editor' />
       <Image src={visualTools1} alt='pilot data management system' />
       <Image src={visualTools2} alt='pilot data management system' />
       <Image src={visualTools3} alt='pilot data management system' />
