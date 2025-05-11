@@ -29,7 +29,6 @@ const Portfolio = () => {
       <Image src={pilotHome3} alt='pilot ai homepage' />
       <Image src={pilotHome4} alt='pilot ai homepage' />
       <Image src={cloudAnalytics} alt='cloud analytics dashboard' />
-      <Image src={cloudAnalytics} alt='cloud analytics dashboard' />
       <Image src={rpegio1} alt='rpegio video editor' />
       <Image src={visualTools1} alt='pilot data management system' />
       <Image src={visualTools2} alt='pilot data management system' />
