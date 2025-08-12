@@ -71,15 +71,15 @@ const Hire = () => {
         <div className='section'>
           {renderSectionHeader('Skills', GRAPH_ICON)}
           <div className='sectionContent'>
-            I am able to pick up new tools and technologies quickly and easily. I am most experienced with programming in the node.js ecosystem, but am also comfortable using a wide variety of other functional and imperative languages. I have been creating websites since I was 10 years old, and have professionally worked with a variety of database, api, and web-server systems. I also use Photoshop and Sketch to create UX mockups and original assets.
+            I am able to pick up new tools and technologies quickly and easily. I am most experienced with programming in the node.js ecosystem using TypeScript, but am also comfortable using a wide variety of other languages and frameworks. I have been creating websites since I was 10 years old, and have professionally worked with a variety of database, api, and web-server systems. I also use Photoshop and Sketch to create UX mockups and original assets.
           </div>
         </div>
         <div className='section'>
           {renderSectionHeader('Employment History', BRIEFCASE_ICON)}
           <div className='sectionContent'>
-            {renderEntry('Syntiant Corporation', 'https://www.syntiant.com', 'Remote', 'August 2022 - Present', 'Senior Software Engineer & UX Lead', 'Responsible for web application and demo development for a variety of clients and use cases, as well as company-wide UX design. One of my main responsibilities is building and maintaining our computer vision training pipeline, using React.js for frontend with a C++ and PostgreSQL backend.')}
+            {renderEntry('Syntiant Corporation', 'https://www.syntiant.com', 'Remote', 'August 2022 - Present', 'Senior Software Engineer & UX Lead', 'Responsible for full-stack web application development for a variety of clients and use cases, as well as company-wide UX design. One of my main responsibilities is building and maintaining our computer vision training pipeline, using React.js for frontend with a C++ and PostgreSQL backend.')}
             {renderEntry('Pilot AI', 'https://pilot.ai', 'Palo Alto, CA & Remote', 'June 2018 - August 2022', 'Senior Software Engineer & Head of Frontend Engineering', 'Built a variety of products using the output of our computer vision models, including real-time retail store analytics software using MongoDB, Node.js, GraphQL, and a React.js frontend. I also built our end-to-end model training pipeline, and designed and built the company website.')}
-            {renderEntry('Grokker', 'https://www.grokker.com', 'San Jose, CA', 'June 2015 - June 2018', 'Software Engineer', 'Built a variety of applications for video streaming on various platforms, including iOS, android, Apple tvOS, Roku, and web. I was responsible for UX design for many of these applications, and worked extensively on the backend of the system using MongoDB and Node.js.')}
+            {renderEntry('Grokker', 'https://www.grokker.com', 'San Jose, CA', 'June 2015 - June 2018', 'Software Engineer', 'Built applications for video streaming on various platforms, including iOS, android, Apple tvOS, Roku, and web. I was responsible for UX design for many of these applications, and worked extensively on the backend of the system using MongoDB and Node.js.')}
           </div>
         </div>
         <div className='section'>
