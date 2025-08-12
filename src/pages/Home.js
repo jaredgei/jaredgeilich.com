@@ -62,8 +62,8 @@ const Home = () => {
           <div className='flexText'>
             <div className='highlight'>Hello.</div>
             <div className='text'>Thanks for visiting my website. I am a {getAge()} year old developer, designer, and musician, currently based in Boston, MA.</div>
-            <div className='text'>I am passionate about user experience and building beautiful products, and have worked across the full stack of application development.</div>
-            <div className='text'>I work primarily in the node.js ecosystem, and have experience with UX and creative design using software like Sketch, Photoshop, Procreate, and more.</div>
+            <div className='text'>I am passionate about creataing beautiful user experiences, and work across the full stack of application development.</div>
+            <div className='text'>I work primarily in the node.js ecosystem using TypeScript, and also have experience with UX and creative design using software like Sketch, Photoshop, Procreate, and more.</div>
             <div className='text'>Finally, I have experience with music composition and production, as well as film production and editing.</div>
           </div>
         </div>
