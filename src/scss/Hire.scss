@@ -12,7 +12,10 @@
     margin: auto;
     padding: $xlarge_spacing;
     border-radius: $standard_border_radius;
-    transition: padding 0.2s, border-radius 0.2s, box-shadow 0.2s;
+    transition:
+      padding 0.2s,
+      border-radius 0.2s,
+      box-shadow 0.2s;
 
     .resumeHeader {
       display: flex;
@@ -25,7 +28,10 @@
         padding: 4px;
         margin-right: $large_spacing;
         overflow: hidden;
-        transition: width 0.2s, padding 0.2s, margin 0.2s;
+        transition:
+          width 0.2s,
+          padding 0.2s,
+          margin 0.2s;
 
         img {
           width: 100%;
@@ -88,21 +94,21 @@
       margin-bottom: $medium_spacing;
 
       .sectionIcon {
-        width: 18px;
-        height: 18px;
+        width: 24px;
+        height: 24px;
         display: flex;
         align-items: center;
         justify-content: center;
 
         svg {
           fill: $purple;
-          width: 18px;
-          height: 18px;
+          width: 24px;
+          height: 24px;
         }
       }
 
       .sectionTitle {
-        line-height: 18px;
+        line-height: 24px;
         text-transform: uppercase;
         margin: 0 $small_spacing;
       }
