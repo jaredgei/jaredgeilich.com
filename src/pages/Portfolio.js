@@ -3,6 +3,7 @@ import 'scss/Portfolio.scss';
 
 import Image from 'components/Image';
 
+import audioBrowser from 'images/portfolio/audio-browser.png';
 import cloudAnalytics from 'images/portfolio/cloud-analytics.png';
 import mediocre from 'images/portfolio/mediocre.jpg';
 import pilotHome1 from 'images/portfolio/pilot-home-1.png';
@@ -32,6 +33,7 @@ const Portfolio = () => {
       <Image src={cloudAnalytics} alt='cloud analytics dashboard' />
       <Image src={rpegio1} alt='rpegio video editor' />
       <Image src={syntiantPlatform} alt='syntiant model training platform' />
+      <Image src={audioBrowser} alt='syntiant audio browser' />
       <Image src={visualTools1} alt='pilot data management system' />
       <Image src={visualTools2} alt='pilot data management system' />
       <Image src={visualTools3} alt='pilot data management system' />
