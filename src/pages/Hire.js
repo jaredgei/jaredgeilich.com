@@ -180,7 +180,7 @@ const Hire = () => {
               'https://rpeg.io',
               null,
               null,
-              'Lead Engineer & Designer',
+              'Founder & Sole Engineer',
               'Lyric synchronization software for musicians and their teams to quickly generate precise word-by-word timing data using a combination of AI and manual input, then generate and customize beautiful lyric videos.',
             )}
             {renderEntry(
@@ -188,15 +188,15 @@ const Hire = () => {
               'https://mediocre.business',
               null,
               null,
-              'Lead Engineer & Designer',
-              'Built a platform highlighting average-rated businesses to challenge optimization bias in recommendation systems, blending humor with alternative discovery mechanics',
+              'Co-Founder & Sole Engineer',
+              'Built a platform highlighting average-rated businesses to challenge optimization bias in recommendation systems, blending humor with alternative discovery mechanics.',
             )}
             {renderEntry(
               'synthesize.consulting',
               'https://github.com/jaredgei/synthesize/tree/main',
               null,
               null,
-              'Lead Engineer & Designer',
+              'Co-Founder & Sole Engineer',
               'The world’s first micro-consulting platform where users can ask a former McKinsey consultant bite-sized (yes/no or 100 character limited) questions for a fraction of the cost of traditional consulting.',
             )}
             {renderEntry(
@@ -204,7 +204,7 @@ const Hire = () => {
               'https://github.com/jaredgei/the-stall-wall',
               null,
               null,
-              'Lead Engineer & Designer',
+              'Co-Founder & Sole Engineer',
               'A chatroom that only allows one user inside at a time, similar to communication via writing on the inside of a bathroom stall.',
             )}
             {renderEntry(
@@ -212,7 +212,7 @@ const Hire = () => {
               'https://engageduniversity.blogs.wesleyan.edu/2016/02/22/pcse-seed-grants-in-action-report-3-from-potlux/',
               null,
               null,
-              'Frontend Engineer & Designer',
+              'Lead Frontend Engineer & Designer',
               'A sustainability platform for college students to share the programs they are creating at their universities to help the environment.',
             )}
           </div>
